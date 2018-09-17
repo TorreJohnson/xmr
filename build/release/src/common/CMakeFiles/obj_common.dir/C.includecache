@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/torre/Desktop/monero-latest/monero/src/common/aligned.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+stdint.h
+-
+string.h
+-
+aligned.h
+/home/torre/Desktop/monero-latest/monero/src/common/aligned.h
+
+/home/torre/Desktop/monero-latest/monero/src/common/aligned.h
+

@@ -1,0 +1,59 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fda13/fast"
+make[4]: Entering directory '/home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_fda13.dir/build.make CMakeFiles/cmTC_fda13.dir/build
+make[5]: Entering directory '/home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fda13.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_fda13.dir/CheckSymbolExists.c.o   -c /home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_fda13
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fda13.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_fda13.dir/CheckSymbolExists.c.o  -o cmTC_fda13 -rdynamic 
+CMakeFiles/cmTC_fda13.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_fda13.dir/build.make:97: recipe for target 'cmTC_fda13' failed
+make[5]: *** [cmTC_fda13] Error 1
+make[5]: Leaving directory '/home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fda13/fast' failed
+make[4]: *** [cmTC_fda13/fast] Error 2
+make[4]: Leaving directory '/home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp'
+
+File /home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_87f4c/fast"
+make[4]: Entering directory '/home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_87f4c.dir/build.make CMakeFiles/cmTC_87f4c.dir/build
+make[5]: Entering directory '/home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_87f4c.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_87f4c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_87f4c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87f4c.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_87f4c.dir/CheckFunctionExists.c.o  -o cmTC_87f4c -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_87f4c.dir/build.make:97: recipe for target 'cmTC_87f4c' failed
+make[5]: *** [cmTC_87f4c] Error 1
+make[5]: Leaving directory '/home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_87f4c/fast' failed
+make[4]: *** [cmTC_87f4c/fast] Error 2
+make[4]: Leaving directory '/home/torre/Desktop/monero-latest/monero/build/release/tests/gtest/CMakeFiles/CMakeTmp'
+
+
